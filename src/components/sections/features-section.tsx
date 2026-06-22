@@ -1,4 +1,4 @@
-import { Code, Layers, Palette, Sparkles, Zap, Shield } from "lucide-react"
+import { Truck, ShieldCheck, BadgeCheck, CreditCard, Headphones, RotateCcw } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { ScrollReveal } from "@/components/scroll-reveal"
@@ -6,50 +6,43 @@ import { GlowingTiltCard } from "@/components/ui/glowing-tilt-card"
 import { ParallaxScroll } from "@/components/ui/parallax-scroll"
 import { AnimatedText } from "@/components/ui/animated-text"
 import { AnimatedBackground } from "@/components/ui/animated-background"
-import { ProgressCard } from "@/components/ui-library/cards/progress-card"
 
 export function FeaturesSection() {
   const features = [
     {
-      icon: <Layers className="h-10 w-10 text-red-500" />,
-      title: "Модульные компоненты",
-      description: "Собирайте сложные интерфейсы из переиспользуемых компонентов.",
-      progress: 100,
+      icon: <Truck className="h-10 w-10 text-red-500" />,
+      title: "Быстрая доставка",
+      description: "Привезём монитор за 1–3 дня в любой город России.",
       borderClass: "border-glow-red",
     },
     {
-      icon: <Palette className="h-10 w-10 text-blue-500" />,
-      title: "Гибкие темы",
-      description: "Легко настраивайте цвета, шрифты и стили под ваш бренд.",
-      progress: 90,
+      icon: <ShieldCheck className="h-10 w-10 text-blue-500" />,
+      title: "Гарантия до 3 лет",
+      description: "Официальная гарантия и сервис на все модели в каталоге.",
       borderClass: "border-glow-blue",
     },
     {
-      icon: <Zap className="h-10 w-10 text-yellow-500" />,
-      title: "Высокая скорость",
-      description: "Легковесные компоненты для быстрой загрузки и работы.",
-      progress: 95,
+      icon: <BadgeCheck className="h-10 w-10 text-yellow-500" />,
+      title: "Только оригинал",
+      description: "Поставки напрямую — никаких подделок и серого импорта.",
       borderClass: "border-glow-yellow",
     },
     {
-      icon: <Code className="h-10 w-10 text-green-500" />,
-      title: "TypeScript из коробки",
-      description: "Полная типизация для лучшего DX и меньше багов.",
-      progress: 100,
+      icon: <CreditCard className="h-10 w-10 text-green-500" />,
+      title: "Удобная оплата",
+      description: "Картой, наличными или в рассрочку без переплат.",
       borderClass: "border-glow-green",
     },
     {
-      icon: <Sparkles className="h-10 w-10 text-purple-500" />,
-      title: "Анимации",
-      description: "Красивые анимации и переходы на базе Framer Motion.",
-      progress: 85,
+      icon: <Headphones className="h-10 w-10 text-purple-500" />,
+      title: "Поддержка 7 дней",
+      description: "Поможем выбрать монитор под ваши задачи и бюджет.",
       borderClass: "border-glow-purple",
     },
     {
-      icon: <Shield className="h-10 w-10 text-orange-500" />,
-      title: "Доступность",
-      description: "Компоненты соответствуют стандартам WCAG для всех пользователей.",
-      progress: 92,
+      icon: <RotateCcw className="h-10 w-10 text-orange-500" />,
+      title: "Возврат 14 дней",
+      description: "Не подошёл монитор — вернём деньги без вопросов.",
       borderClass: "border-glow-orange",
     },
   ]
@@ -63,13 +56,13 @@ export function FeaturesSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center mb-12">
             <div className="space-y-4">
               <AnimatedText
-                text="Возможности для современной веб-разработки"
+                text="Почему покупают в БытоТех"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="slide"
               />
               <AnimatedText
-                text="Наша библиотека содержит все необходимое для создания красивых, интерактивных и доступных веб-приложений."
+                text="Мы делаем покупку монитора простой и безопасной: честные цены, гарантия и забота на каждом шаге."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -100,16 +93,6 @@ export function FeaturesSection() {
                       <CardDescription className="text-base opacity-70 transition-opacity duration-300 group-hover:opacity-100">
                         {feature.description}
                       </CardDescription>
-
-                      <ProgressCard
-                        title=""
-                        progress={feature.progress}
-                        total={100}
-                        status={feature.progress === 100 ? "success" : "default"}
-                        showPercentage
-                        variant="minimal"
-                        progressColor={feature.progress === 100 ? "bg-green-500" : "bg-red-500"}
-                      />
                     </CardContent>
                   </Card>
                 </GlowingTiltCard>

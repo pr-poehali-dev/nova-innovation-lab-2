@@ -9,23 +9,23 @@ export function TestimonialsSection() {
   const testimonials = [
     {
       name: "Алексей Иванов",
-      role: "Frontend-разработчик",
+      role: "Купил БытоТех Start 24",
       content:
-        "Эта библиотека сэкономила мне кучу времени на разработку. Компоненты красиво оформлены и легко настраиваются.",
+        "Брал монитор для домашнего офиса — картинка чёткая, рамки тонкие, глаза не устают. За эти деньги отличный вариант, доставили на следующий день.",
       avatar: "АИ",
     },
     {
       name: "Мария Петрова",
-      role: "UI/UX-дизайнер",
+      role: "Купила БытоТех Pro 27",
       content:
-        "Как дизайнер, я ценю внимание к деталям в этих компонентах. Они не только функциональны, но и эстетичны.",
+        "Изогнутый экран и 144 Гц — это совсем другой уровень в играх и работе с фото. Цвета сочные, картинка плавная. Очень довольна покупкой!",
       avatar: "МП",
     },
     {
       name: "Дмитрий Козлов",
-      role: "Продакт-менеджер",
+      role: "Купил БытоТех Ultra 34",
       content:
-        "Продуктивность нашей команды значительно выросла с этой библиотекой. Документация отличная, компоненты надежные.",
+        "Ultrawide для монтажа видео — мечта. Огромное рабочее пространство, точные цвета и премиальный корпус. Менеджер помог с выбором, спасибо!",
       avatar: "ДК",
     },
   ]
@@ -39,13 +39,13 @@ export function TestimonialsSection() {
           <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <div className="space-y-2">
               <AnimatedText
-                text="Отзывы пользователей"
+                text="Отзывы покупателей"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl"
                 animation="slide"
               />
               <AnimatedText
-                text="Узнайте, что говорят разработчики и дизайнеры, использующие нашу библиотеку."
+                text="Что говорят клиенты, которые уже выбрали монитор в БытоТех."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"

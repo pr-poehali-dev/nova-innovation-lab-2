@@ -1,4 +1,5 @@
-import { Icons } from "@/components/icons"
+import { Link } from "react-router-dom"
+import Icon from "@/components/ui/icon"
 import { ScrollToTopButton } from "@/components/scroll-to-top-button"
 
 export function SiteFooter() {
@@ -7,138 +8,111 @@ export function SiteFooter() {
       <div className="container flex flex-col gap-10 py-16">
         <div className="flex flex-col gap-10 md:flex-row">
           <div className="flex flex-1 flex-col gap-4">
-            <a href="/" className="flex items-center gap-2">
-              <Icons.logo className="h-6 w-6" />
-              <span className="font-heading text-xl tracking-tight">PixelForge</span>
-            </a>
+            <Link to="/" className="flex items-center gap-2">
+              <Icon name="MonitorSmartphone" className="h-6 w-6 text-primary" />
+              <span className="font-heading text-xl tracking-tight">БытоТех</span>
+            </Link>
             <p className="text-muted-foreground max-w-sm opacity-70">
-              Современная библиотека UI-компонентов на базе shadcn/ui и Aceternity UI для веб-разработчиков и дизайнеров
-              в сфере AI-софта.
+              Магазин премиальных мониторов БытоТех. Тщательно отобранные модели для дома, игр и профессиональной
+              работы — с гарантией и быстрой доставкой по всей России.
             </p>
             <div className="flex gap-4">
-              <a href="https://twitter.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
-                <Icons.twitter className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">Twitter</span>
+              <a href="https://t.me" target="_blank" rel="noreferrer" className="glassmorphic-icon">
+                <Icon name="Send" className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
+                <span className="sr-only">Telegram</span>
               </a>
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
-                <Icons.gitHub className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">GitHub</span>
+              <a href="https://vk.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
+                <Icon name="Users" className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
+                <span className="sr-only">VK</span>
               </a>
-              <a href="https://discord.com" target="_blank" rel="noreferrer" className="glassmorphic-icon">
-                <Icons.discord className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
-                <span className="sr-only">Discord</span>
+              <a href="https://wa.me" target="_blank" rel="noreferrer" className="glassmorphic-icon">
+                <Icon name="MessageCircle" className="h-5 w-5 text-muted-foreground transition-colors hover:text-foreground" />
+                <span className="sr-only">WhatsApp</span>
               </a>
             </div>
           </div>
           <div className="grid flex-1 grid-cols-2 gap-10 sm:grid-cols-3">
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Продукт</h3>
+              <h3 className="text-sm font-medium tracking-tight">Каталог</h3>
+              <ul className="flex flex-col gap-2">
+                <li>
+                  <Link
+                    to="/monitor-start"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                  >
+                    Start 24 — бюджетный
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/monitor-pro"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                  >
+                    Pro 27 — игровой
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/monitor-ultra"
+                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
+                  >
+                    Ultra 34 — премиум
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-2">
+              <h3 className="text-sm font-medium tracking-tight">Магазин</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <a
-                    href="#features"
+                    href="#delivery"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Функции
+                    Доставка
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#pricing"
+                    href="#warranty"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Цены
+                    Гарантия
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#components"
+                    href="#payment"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Компоненты
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#changelog"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Изменения
+                    Оплата
                   </a>
                 </li>
               </ul>
             </div>
             <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Компания</h3>
+              <h3 className="text-sm font-medium tracking-tight">Контакты</h3>
               <ul className="flex flex-col gap-2">
                 <li>
                   <a
-                    href="#about"
+                    href="tel:+78001234567"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    О нас
+                    8 800 123-45-67
                   </a>
                 </li>
                 <li>
                   <a
-                    href="#blog"
+                    href="mailto:info@bytoteh.ru"
                     className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
                   >
-                    Блог
+                    info@bytoteh.ru
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#careers"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Вакансии
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#contact"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Контакты
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="flex flex-col gap-2">
-              <h3 className="text-sm font-medium tracking-tight">Правовая информация</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <a
-                    href="#privacy"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Конфиденциальность
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#terms"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Условия
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#cookies"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Cookies
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#licenses"
-                    className="text-sm text-muted-foreground transition-colors hover:text-foreground opacity-70"
-                  >
-                    Лицензии
-                  </a>
+                  <span className="text-sm text-muted-foreground opacity-70">
+                    Ежедневно с 9:00 до 21:00
+                  </span>
                 </li>
               </ul>
             </div>
@@ -146,7 +120,7 @@ export function SiteFooter() {
         </div>
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <p className="text-sm text-muted-foreground opacity-70">
-            &copy; {new Date().getFullYear()} PixelForge. Все права защищены.
+            &copy; {new Date().getFullYear()} БытоТех. Все права защищены.
           </p>
           <div className="flex gap-4">
             <a

@@ -14,13 +14,13 @@ export function CtaSection() {
           <div className="flex flex-col items-center justify-center space-y-6 text-center">
             <div className="space-y-4">
               <AnimatedText
-                text="Готовы создавать крутые интерфейсы?"
+                text="Готовы выбрать свой монитор?"
                 variant="heading"
                 className="text-3xl font-heading font-bold tracking-tighter sm:text-5xl gradient-text"
                 animation="wave"
               />
               <AnimatedText
-                text="Начните работу с нашей библиотекой уже сегодня и измените подход к веб-разработке."
+                text="Закажите монитор БытоТех сегодня — с доставкой, гарантией и поддержкой на каждом шаге."
                 variant="paragraph"
                 className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400 opacity-70"
                 animation="fade"
@@ -41,8 +41,8 @@ export function CtaSection() {
                 gradientTo="to-red-700"
                 asChild
               >
-                <a href="#pricing" className="flex items-center">
-                  Начать
+                <a href="/#catalog" className="flex items-center">
+                  В каталог
                   <motion.span
                     className="ml-2 inline-block"
                     animate={{ x: [0, 5, 0] }}
@@ -59,7 +59,7 @@ export function CtaSection() {
                 duration={6}
               >
                 <OutlineButton size="lg" className="bg-background w-full h-full border-0 px-8 py-3" asChild>
-                  <a href="#components">Компоненты</a>
+                  <a href="tel:+78001234567">Позвонить</a>
                 </OutlineButton>
               </AnimatedGradientBorder>
             </motion.div>

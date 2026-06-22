@@ -45,13 +45,13 @@ export function HeroSection() {
               <motion.div className="space-y-4" variants={itemVariants}>
                 {/* Modern Hero Header with Gradient */}
                 <h1 className="text-4xl font-heading font-bold tracking-tighter sm:text-5xl xl:text-7xl/none">
-                  <span className="gradient-text">UI-компоненты</span>
+                  <span className="gradient-text">Мониторы</span>
                   <br />
-                  <span className="text-foreground">для веб-разработчиков</span>
+                  <span className="text-foreground">которые видно сразу</span>
                 </h1>
                 <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400 opacity-70">
-                  Премиум-библиотека компонентов на shadcn/ui и Aceternity UI для современных веб-приложений.
-                  Создана для разработчиков и дизайнеров в сфере AI-софта.
+                  БытоТех — магазин премиальных мониторов для дома, игр и работы. Отобранные модели,
+                  честные цены, гарантия и быстрая доставка по всей России.
                 </p>
               </motion.div>
 
@@ -63,8 +63,8 @@ export function HeroSection() {
                   gradientTo="to-red-700"
                   asChild
                 >
-                  <a href="#components" className="flex items-center">
-                    Начать
+                  <a href="#catalog" className="flex items-center">
+                    Смотреть каталог
                     <motion.span
                       className="ml-2 inline-block"
                       animate={{ x: [0, 4, 0] }}
@@ -76,8 +76,8 @@ export function HeroSection() {
                 </GradientButton>
 
                 <MagneticButton className="neumorphic-button">
-                  <a href="#features" className="px-6 py-2.5 block">
-                    Возможности
+                  <a href="tel:+78001234567" className="px-6 py-2.5 block">
+                    Позвонить
                   </a>
                 </MagneticButton>
               </motion.div>
@@ -85,7 +85,7 @@ export function HeroSection() {
               <motion.div variants={itemVariants} className="pt-4">
                 <p className="text-sm text-muted-foreground flex items-center">
                   <span className="inline-block w-2 h-2 rounded-full bg-green-500 mr-2"></span>
-                  Более 2 000 разработчиков по всему миру
+                  Доставка по России 1–3 дня · Гарантия до 3 лет
                 </p>
               </motion.div>
             </motion.div>
@@ -93,37 +93,19 @@ export function HeroSection() {
 
           <ScrollReveal delay={0.3}>
             <SpotlightCard className="relative h-[450px] w-full overflow-hidden rounded-xl border glassmorphic-card p-1 border-glow-red">
-              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-gray-900/20 z-10"></div>
-              <div className="relative z-20 h-full w-full rounded-xl bg-gradient-to-br from-red-950/50 to-gray-950/50 p-6 flex items-center justify-center">
-                <div className="grid grid-cols-2 gap-6 w-full max-w-md">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.6 }}
-                    className="col-span-2 h-24 rounded-xl bg-red-800/20 border border-red-800/30 flex items-center justify-center glassmorphic-inner-card"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
-                  >
-                    <span className="font-heading text-xl text-white tracking-tight">Премиум-компоненты</span>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.8 }}
-                    className="h-32 rounded-xl bg-gray-800/20 border border-gray-800/30 flex items-center justify-center glassmorphic-inner-card"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(75, 85, 99, 0.3)" }}
-                  >
-                    <span className="font-heading text-white tracking-tight">Tailwind</span>
-                  </motion.div>
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 1.0 }}
-                    className="h-32 rounded-xl bg-red-900/20 border border-red-900/30 flex items-center justify-center glassmorphic-inner-card"
-                    whileHover={{ scale: 1.03, boxShadow: "0 0 15px rgba(220, 38, 38, 0.3)" }}
-                  >
-                    <span className="font-heading text-white tracking-tight">TypeScript</span>
-                  </motion.div>
-                </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-red-900/20 via-transparent to-gray-900/20 z-10 pointer-events-none"></div>
+              <motion.img
+                src="https://cdn.poehali.dev/projects/0be8d9a8-a64e-4b47-87c1-e3560ed09a34/files/ee841620-f151-4b24-8241-56f6560e17c5.jpg"
+                alt="Флагманский монитор БытоТех Ultra 34"
+                className="relative z-0 h-full w-full rounded-xl object-cover"
+                initial={{ opacity: 0, scale: 1.05 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              />
+              <div className="absolute bottom-4 left-4 z-20">
+                <span className="rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1 text-xs font-medium text-amber-300">
+                  Хит продаж · Ultra 34
+                </span>
               </div>
             </SpotlightCard>
           </ScrollReveal>
