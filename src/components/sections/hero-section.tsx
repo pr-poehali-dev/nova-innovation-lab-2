@@ -75,11 +75,7 @@ export function HeroSection() {
                   </a>
                 </GradientButton>
 
-                <MagneticButton className="neumorphic-button">
-                  <a href="tel:+78001234567" className="px-6 py-2.5 block">
-                    Позвонить
-                  </a>
-                </MagneticButton>
+
               </motion.div>
 
               <motion.div variants={itemVariants} className="pt-4">

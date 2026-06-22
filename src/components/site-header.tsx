@@ -60,9 +60,6 @@ export function SiteHeader() {
 
           {/* Desktop CTA Buttons - Hidden on mobile */}
           <div className="hidden md:flex items-center space-x-2">
-            <Button variant="ghost" size="sm" className="neumorphic-button" asChild>
-              <a href="tel:+78001234567">8 800 123-45-67</a>
-            </Button>
             <Button size="sm" className="neumorphic-button-primary" asChild>
               <Link to="/monitor-pro">
                 Каталог
@@ -135,12 +132,7 @@ export function SiteHeader() {
               </div>
 
               <div className="mt-auto p-4 border-t border-border">
-                <div className="grid grid-cols-2 gap-3">
-                  <Button variant="outline" className="w-full" asChild>
-                    <a href="tel:+78001234567" onClick={closeMobileMenu}>
-                      Позвонить
-                    </a>
-                  </Button>
+                <div className="grid grid-cols-1 gap-3">
                   <Button className="w-full neumorphic-button-primary" asChild>
                     <Link to="/monitor-pro" onClick={closeMobileMenu}>
                       Каталог

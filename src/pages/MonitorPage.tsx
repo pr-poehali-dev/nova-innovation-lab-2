@@ -108,12 +108,7 @@ const MonitorPage = () => {
                               Купить
                             </span>
                           </GradientButton>
-                          <Button variant="outline" size="lg" className="neumorphic-button" asChild>
-                            <a href="tel:+78001234567">
-                              <Icon name="Phone" className="mr-2 h-4 w-4" />
-                              Заказать звонок
-                            </a>
-                          </Button>
+
                         </div>
 
                         <ul className="grid gap-3 pt-2 sm:grid-cols-2">

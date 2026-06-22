@@ -53,15 +53,7 @@ export function CtaSection() {
                 </a>
               </GradientButton>
 
-              <AnimatedGradientBorder
-                colors={["#dc2626", "#4b5563", "#dc2626", "#4b5563"]}
-                borderWidth={1}
-                duration={6}
-              >
-                <OutlineButton size="lg" className="bg-background w-full h-full border-0 px-8 py-3" asChild>
-                  <a href="tel:+78001234567">Позвонить</a>
-                </OutlineButton>
-              </AnimatedGradientBorder>
+
             </motion.div>
           </div>
         </ScrollReveal>
